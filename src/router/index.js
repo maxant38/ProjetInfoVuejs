@@ -1,17 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
 import ListWindows from'../views/ListWindows.vue'
+import SearchWindow from'../views/SearchWindow.vue'
+import About from'../views/About.vue'
+import ListRooms from'../views/ListRooms.vue'
 
 const routes = [
   {
     path: '/',
+    name: 'SearchWindow',
+    component: SearchWindow
+  }, 
+  {
+    path: '/windows',
     name: 'ListWindows',
     component: ListWindows
   },
   {
-    path: '/Home',
-    name: 'Home',
-    component: Home
+    path: '/rooms',
+    name: 'ListRooms',
+    component: ListRooms
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
   },
   {
     path: '/about',

@@ -1,7 +1,6 @@
 <template>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
   <div class="home">
-    <div class="contaner" id="titre-colonne">
       <div class="row">
         <ul id="horizontal-list">
           <li class="two columns">Id</li>
@@ -12,7 +11,6 @@
           <li class="two columns">Windows Statut</li>
         </ul>
       </div>
-    </div>
 
     <Windows
       v-for="item in dataWindows"
@@ -28,9 +26,6 @@
 </template>
 
 <style scoped>
-#titre-colonne {
-  height: 84px;
-}
 
 .table {
   display: table; /* Allow the centering to work */
@@ -57,7 +52,7 @@ import Windows from "@/components/Windows.vue";
 import axios from "axios";
 
 export default {
-  name: "ListWindows",
+  name: "ListRooms",
   components: {
     Windows,
   },

@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
-    <router-link to="/">ListWindows</router-link>
-    <router-link to="/Home">Home</router-link> |
+    <router-link to="/">Search a Window</router-link>|
+    <router-link to="/windows">List Windows</router-link>|
+    <router-link to="/rooms">List Rooms</router-link>|
     <router-link to="/about">About</router-link>
   </div>
   <router-view />
