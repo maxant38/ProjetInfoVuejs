@@ -50,6 +50,7 @@ ul#horizontal-list li {
 // @ is an alias to /src
 import Windows from "@/components/Windows.vue";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export default {
   name: "ListRooms",
@@ -75,8 +76,20 @@ export default {
       .catch((error) => {
         console.log(error);
         this.errored = true;
+        this.showAlert()
       })
       .finally(() => (this.loading = false));
   },
+
+  methods: {showAlert() {
+      // Use sweetalret2
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "There is a problem with windows loading !",
+        confirmButtonColor: "green",
+      });
+    },}
+  
 };
 </script>

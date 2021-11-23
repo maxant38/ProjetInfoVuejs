@@ -1,12 +1,8 @@
 <template>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
       <div class="row">
-          <li class="two columns"> {{ id }}</li>
-          <li class="two columns">{{ name }} </li>
-          <li class="two columns">{{ roomName}} </li>
-          <li class="two columns"> {{ currentTemperature }} </li>
-          <li class="two columns">{{ targetTemperature }} </li>
-          <li class="two columns">{{ windowStatus }} </li>
+          <li > {{ idWindow.id }}</li>
+          <li > {{ idWindow.name }}</li>
       </div>
 
 
@@ -17,8 +13,11 @@
 export default {
  // inheritAttrs: false,
   name: 'Window',
-  props:["id","name","roomName","currentTemperature","targetTemperature","windowStatus"]
+  props: ["idWindow"]
 }
+
+console.log("st")
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
