@@ -67,6 +67,7 @@ export default {
     axios
       .get(
         "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows"
+        
       )
       .then((response) => {
         (this.dataWindows = response.data), console.log(response.data);

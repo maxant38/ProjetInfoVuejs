@@ -8,7 +8,6 @@
       v-model="idWindow"
       type="number"
       placeholder="Enter the id of the window you are looking for"
-      id="idWindow"
     />
     <button v-on:click="search">Search</button>
   </div>
@@ -39,16 +38,30 @@ export default {
   data() {
     return {
       dataWindow: null,
-    };
+      idWindow: null
+    }
   },
 
 methods: {
+
+    getData(){
+        console.warn(this.idWindow)
+    },
+
+
   search() {
-    let idW = null;
-    
+
+
     axios
-      .get("https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/"+ idW )
-      .then((response) => {(this.dataWindow = response.data), console.log(response.data);})
+      .get("https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/" + this.idWindow)
+      .then((response) => {(this.dataWindow = response.data),   
+      
+      console.log(response.data)
+      if (response.data == ''){
+          this.showAlert()
+      }
+      
+      })
       .catch((error) => {
         console.log(error);
         this.errored = true;
