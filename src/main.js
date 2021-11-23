@@ -7,4 +7,4 @@ import VueSweetalert2 from 'vue-sweetalert2';
 
 
 
-createApp(App).use(router,VueAxios,axios,VueSweetalert2).mount('#app')
+createApp(App).use(router, VueAxios, axios, VueSweetalert2).mount('#app')

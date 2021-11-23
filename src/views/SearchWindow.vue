@@ -8,6 +8,7 @@
       v-model="idWindow"
       type="number"
       placeholder="Enter the id of the window you are looking for"
+      id="idWindow"
     />
     <button v-on:click="search">Search</button>
   </div>
@@ -28,6 +29,8 @@ import Swal from 'sweetalert2'
 
 export default {
 
+
+
   name: "SearchWindow",
   components: {
   
@@ -36,18 +39,16 @@ export default {
   data() {
     return {
       dataWindow: null,
-      idWindow: null,
     };
   },
 
 methods: {
   search() {
-
+    let idW = null;
+    
     axios
-      .get("https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/"+ idWindow )
-      .then((response) => {
-        (this.dataWindow = response.data), console.log(response.data);
-      })
+      .get("https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/"+ idW )
+      .then((response) => {(this.dataWindow = response.data), console.log(response.data);})
       .catch((error) => {
         console.log(error);
         this.errored = true;
