@@ -9,6 +9,8 @@
           <li class="two columns">Current Room Temperature</li>
           <li class="two columns">Target Room Temperature</li>
           <li class="two columns">Windows Statut</li>
+    
+          
         </ul>
       </div>
 

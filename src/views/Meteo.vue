@@ -7,11 +7,6 @@
      <p> {{ Temperature}} </p>
      <p> {{ Weather }} </p>
 
-
-
-
-
-
 </div>
 
 
@@ -59,9 +54,10 @@ export default {
         (this.Meteo = response.data), 
         console.log(response.data);
         this.Icon = ("https://openweathermap.org/img/w/"+ this.Meteo.weather[0].icon+".png").toString()
-        this.Humidity = "Humidity:  " + this.Meteo.main.humidity.roundToInt().toString() + " %"
-        this.Temperature = "Temperature:  "+ (this.Meteo.main.temp - 273.15).roundToInt().toString() + " °C"
+        this.Humidity = "Humidity:  " + this.Meteo.main.humidity + " %"
+        this.Temperature = "Temperature:  "+ Math.round((this.Meteo.main.temp - 273.15)) + " °C"
         this.Weather = this.Meteo.weather[0].main
+        console.log(this.Weather)
 
       })
       .catch((error) => {
