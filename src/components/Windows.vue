@@ -10,13 +10,16 @@
       <li class="two columns">{{ roomName }}</li>
       <li class="two columns">{{ currentTemperature }}</li>
       <li class="two columns">{{ targetTemperature }}</li>
-      <li class="two columns" v-on:click="Switch()">{{ windowStatus }}</li>
+      <li class="two columns" v-on:click="Switch()">
+        {{ windowStatus }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export default {
   // inheritAttrs: false,
@@ -29,12 +32,37 @@ export default {
     "targetTemperature",
     "windowStatus",
   ],
-
   methods: {
+    showAlert() {
+      // Use sweetalret2
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "There is a problem with windows loading !",
+        confirmButtonColor: "green",
+      });
+    },
+
+    forceRerender() {
+      location.reload();
+    },
+
     Switch() {
-      axios.put(
-        "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/30/switch"
-      );
+      axios
+        .put(
+          "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/" +
+            this.id +
+            "/switch"
+        )
+        .then(() => {
+          this.forceRerender();
+        })
+        .catch((error) => {
+          console.log(error);
+          this.errored = true;
+          this.showAlert();
+        })
+        .finally(() => (this.loading = false));
     },
   },
 };

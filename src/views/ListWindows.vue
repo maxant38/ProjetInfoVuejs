@@ -14,7 +14,7 @@
         </ul>
       </div>
 
-    <Windows
+    <Windows 
       v-for="item in dataWindows"
       :id="item.id"
       :name="item.name"
@@ -83,7 +83,8 @@ export default {
       .finally(() => (this.loading = false));
   },
 
-  methods: {showAlert() {
+  methods: {
+    showAlert() {
       // Use sweetalret2
       Swal.fire({
         icon: "error",
@@ -91,7 +92,10 @@ export default {
         text: "There is a problem with windows loading !",
         confirmButtonColor: "green",
       });
-    },}
+    },
+    
+    
+    }
   
 };
 </script>
