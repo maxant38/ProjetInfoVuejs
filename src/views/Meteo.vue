@@ -1,12 +1,23 @@
 <template>
 
+  <!-- Load required Bootstrap and BootstrapVue CSS -->
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"
+  />
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
+  />
 
-<div v-if="Icon != null">
+<div v-if="Icon != null" id="styleMeteo">
+<div><p>The current weather in Saint Etienne : {{ Weather }} </p></div>
 <img v-bind:src="Icon">
      <p> {{ Humidity }} </p>
      <p> {{ Temperature}} </p>
-     <p> {{ Weather }} </p>
-
+     
 </div>
 
 
@@ -19,6 +30,15 @@
 
 
 <style scoped>
+
+#styleMeteo{
+  background-color: white;
+  padding: 20px;
+  margin: 0px 150px 0px 150px;
+  border-radius: 8px 150px 10px 80px;
+  margin-top:70px 
+}
+
 </style>
 
 
@@ -54,8 +74,8 @@ export default {
         (this.Meteo = response.data), 
         console.log(response.data);
         this.Icon = ("https://openweathermap.org/img/w/"+ this.Meteo.weather[0].icon+".png").toString()
-        this.Humidity = "Humidity:  " + this.Meteo.main.humidity + " %"
-        this.Temperature = "Temperature:  "+ Math.round((this.Meteo.main.temp - 273.15)) + " °C"
+        this.Humidity = "Humidity :  " + this.Meteo.main.humidity + " %"
+        this.Temperature = "Temperature :  "+ Math.round((this.Meteo.main.temp - 273.15)) + " °C"
         this.Weather = this.Meteo.weather[0].main
         console.log(this.Weather)
 

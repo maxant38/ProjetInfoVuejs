@@ -1,33 +1,65 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Search a Window</router-link>|
-    <router-link to="/windows">List Windows</router-link>|
-    <router-link to="/rooms">List Rooms</router-link>|
-    <router-link to="/meteo">Meteo</router-link>
+  <html>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+
+    <!-- Load required Bootstrap and BootstrapVue CSS -->
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"
+  />
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
+  />
+
+
+  <div id="nav" >
+    <router-link to="/" class="three-columns">Search a Window</router-link>
+    <router-link to="/windows" class="three columns">List Windows</router-link>
+    <router-link to="/rooms" class="three columns">List Rooms</router-link>
+    <router-link to="/meteo" class="three columns">Meteo Sainté</router-link>
   </div>
   <router-view />
+  </html>
 </template>
 
 <style>
+
+html{
+
+  background-color: black;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
   text-align: center;
   color: #2c3e50;
 }
 
 #nav {
-  padding: 30px;
+  margin-bottom:20px;
+    background-color:#00E541;
+  padding: 20px;
+
+  font-weight: bold;
+  font-size: 18px;
+   border-radius: 0px 0px 50px 50px; 
+  
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  
+  color: black;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #2f00ff;
 }
 </style>
 

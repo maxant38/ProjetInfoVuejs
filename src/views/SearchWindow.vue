@@ -1,15 +1,28 @@
-<template>
+<template >
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
   />
+
+    <!-- Load required Bootstrap and BootstrapVue CSS -->
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"
+  />
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
+  />
+
   <div class="home">
     <input
       v-model="input"
       type="number"
       placeholder="Enter the id of the window you are looking for"
     />
-    <button v-on:click="search">Search</button>
+    <button class="button-56" role="button" v-on:click="search">Search</button>
     <div v-if="idWindow != null && idWindow != ''">
       <Window v-bind:idWindow="idWindow"> </Window>
     </div>
@@ -17,6 +30,73 @@
 </template>
 
 <style scoped>
+
+      .home{
+        background: #00abb7;
+        height:100%
+        
+
+
+      }
+
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #00E541;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
 </style>
 
 
@@ -74,3 +154,4 @@ export default {
   },
 };
 </script>
+

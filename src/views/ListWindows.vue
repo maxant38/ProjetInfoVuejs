@@ -1,4 +1,5 @@
 <template>
+<html>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
@@ -44,11 +45,17 @@
       ></Windows>
     </table>
   </div>
+  </html>
 </template>
 
 <style scoped>
+html{
+  background-color: black;
+}
 .cont {
   margin: 0 5%;
+  
+  
 }
 
 .table {
@@ -57,7 +64,7 @@
 }
 
 table.table-bordered{
-    border:2px solid #00E541;
+    border:2px solid ;
 
   }
 table.table-bordered > thead > tr > th{
