@@ -27,7 +27,7 @@
           <th scope="col">Target Room Temperature</th>
           <th scope="col">
             Windows Statut<br />
-            (click on statut to switch)
+            (click to swith the statut)
           </th>
         </tr>
       </thead>
@@ -63,6 +63,7 @@ table.table-bordered{
 table.table-bordered > thead > tr > th{
     border:2px solid #00E541;
 }
+
 
 
 </style>

@@ -21,9 +21,12 @@
       <td>{{ id }}</td>
       <td>{{ name }}</td>
       <td>{{ roomName }}</td>
-      <td>{{ currentTemperature }}</td>
-      <td>{{ targetTemperature }}</td>
-      <td>{{ windowStatus }}</td>
+      <td v-if="currentTemperature < targetTemperature" class="froid">{{ currentTemperature }} °C </td>
+      <td v-else-if="currentTemperature === targetTemperature" class="ok">{{ currentTemperature }} °C </td>
+      <td v-else class="chaud">{{ currentTemperature }} °C </td>
+      <td>{{ targetTemperature }} °C</td>
+      <td v-if= 'windowStatus ==="OPEN"' class="open" >{{ windowStatus }}</td>
+      <td v-else class="close" >{{ windowStatus }}</td>
     </tr>
   </tbody>
 </template>
@@ -33,8 +36,12 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 export default {
+
   // inheritAttrs: false,
   name: "WindowsDeux",
+
+
+
   props: [
     "id",
     "name",
@@ -44,6 +51,7 @@ export default {
     "windowStatus",
   ],
   methods: {
+
     showAlert() {
       // Use sweetalret2
       Swal.fire({
@@ -77,12 +85,28 @@ export default {
     },
   },
 };
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.open {
+  color: green;
+}
+.close {
+  color: red;
+}
 
+.ok{
+  color:yellowgreen
+}
+.chaud{
+  color:tomato
+}
+.froid{
+  color:skyblue
+}
 
 
 

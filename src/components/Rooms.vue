@@ -21,8 +21,8 @@
       <td >{{ id }}</td>
       <td>{{ name }}</td>
       <td>{{ floor }}</td>
-      <td>{{ currentTemperature }}</td>
-      <td>{{ targetTemperature }}</td>
+      <td>{{ currentTemperature }}°C</td>
+      <td>{{ targetTemperature }}°C</td>
       <td>{{ buildingId }}</td>
     </tr>
   </tbody>
