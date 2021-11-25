@@ -3,17 +3,35 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
   />
-  <div class="home">
-    <div class="row">
-      <ul id="horizontal-list">
-        <li class="two columns">Id</li>
-        <li class="two columns">Name</li>
-        <li class="two columns">Floor</li>
-        <li class="two columns">Current Room Temperature</li>
-        <li class="two columns">Target Room Temperature</li>
-        <li class="two columns">Building Id</li>
-      </ul>
-    </div>
+
+  <!-- Load required Bootstrap and BootstrapVue CSS -->
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"
+  />
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
+  />
+
+
+  <div class="cont">
+    <table class="table">
+  <thead >
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Floor</th>
+      <th scope="col">Current Room Temperature</th>
+      <th scope="col">Target Room Temperature</th>
+      <th scope="col">Building Id</th>
+      
+      
+    </tr>
+  </thead>
+   
 
     <Rooms
       v-for="item in dataRooms"
@@ -25,23 +43,21 @@
       :buildingId="item.buildingId"
       :key="item.id"
     ></Rooms>
+
+</table>
   </div>
+
 </template>
 
 <style scoped>
-.table {
-  display: table; /* Allow the centering to work */
-  margin: 0 auto;
+
+.table{
+   table-layout: fixed;
+   width:100%;
 }
 
-ul#horizontal-list {
-  list-style: none;
-  padding-top: 20px;
-}
-ul#horizontal-list li {
-  background-color: pink;
-  display: inline;
-  margin: 20px;
+.cont {
+  margin: 0 5%;
 }
 </style>
 
@@ -91,7 +107,6 @@ export default {
         confirmButtonColor: "green",
       });
     },
-  }
-
+  },
 };
 </script>
