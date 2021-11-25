@@ -17,7 +17,7 @@
   />
 
   <div class="cont">
-    <table class="table table-hover table-bordered">
+    <table class="table table-hover table-bordered table-dark">
       <thead>
         <tr class="align-middle">
           <th scope="col">Id</th>
@@ -55,6 +55,16 @@
   table-layout: fixed;
   width: 100%;
 }
+
+table.table-bordered{
+    border:2px solid #00E541;
+
+  }
+table.table-bordered > thead > tr > th{
+    border:2px solid #00E541;
+}
+
+
 </style>
 
 

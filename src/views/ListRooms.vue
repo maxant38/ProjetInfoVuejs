@@ -18,9 +18,9 @@
 
 
   <div class="cont">
-    <table class="table">
+    <table class="table table-hover table-bordered  table-dark">
   <thead >
-    <tr>
+    <tr >
       <th scope="col">Id</th>
       <th scope="col">Name</th>
       <th scope="col">Floor</th>
@@ -51,10 +51,19 @@
 
 <style scoped>
 
-.table{
+table{
    table-layout: fixed;
    width:100%;
+
 }
+table.table-bordered{
+    border:2px solid #00E541;
+
+  }
+table.table-bordered > thead > tr > th{
+    border:2px solid #00E541;
+}
+
 
 .cont {
   margin: 0 5%;

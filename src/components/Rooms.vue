@@ -16,8 +16,8 @@
     href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
   />
 
-  <tbody class="align-middle">
-    <tr>
+  <tbody class="align-middle ">
+    <tr >
       <td >{{ id }}</td>
       <td>{{ name }}</td>
       <td>{{ floor }}</td>
@@ -45,7 +45,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 
 
 
