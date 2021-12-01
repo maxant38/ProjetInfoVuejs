@@ -54,6 +54,7 @@ html{
 }
 .cont {
   margin: 0 5%;
+  font-size: 15px;
   
   
 }
@@ -121,7 +122,10 @@ export default {
         text: "There is a problem with windows loading !",
         confirmButtonColor: "green",
       });
+     
     },
+
+    
   },
 };
 </script>

@@ -1,5 +1,7 @@
 <template>
   <html>
+    
+
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
@@ -18,17 +20,50 @@
   />
 
 
-  <div id="nav" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+     <img src="http://aelpi.univ-lyon1.fr/files/2019/10/mines_saint-etienne-300x225.png" alt="" width="30" height="24">
+      <div class="navbar-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link class="nav-link" to="/">| Search Window |</router-link> 
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/windows">| List Windows |</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/rooms">| List Rooms |</router-link>
+          </li>
+          <li class="nav-item" >
+            <router-link class="nav-link" to="/meteo">| Meteo Sainté |</router-link>
+          </li>
+        </ul>
+      </div>
+
+</nav>
+
+<!-- 
+<div id="nav" >
     <router-link to="/" class="three-columns">Search a Window</router-link>
     <router-link to="/windows" class="three columns">List Windows</router-link>
     <router-link to="/rooms" class="three columns">List Rooms</router-link>
     <router-link to="/meteo" class="three columns">Meteo Sainté</router-link>
-  </div>
+  </div>  -->
+
   <router-view />
   </html>
 </template>
 
 <style>
+
+#titre {
+  font-size: 25px;
+}
+
+.navbar{
+  font-size: 20px;
+
+}
 
 html{
 
@@ -42,31 +77,18 @@ html{
   color: #2c3e50;
 }
 
-#nav {
-  margin-bottom:20px;
-    background-color:#00E541;
-  padding: 20px;
 
-  font-weight: bold;
-  font-size: 18px;
-   border-radius: 0px 0px 50px 50px; 
-  
-}
-
-#nav a {
-  
-  color: black;
-}
-
-#nav a.router-link-exact-active {
-  color: #2f00ff;
-}
 </style>
 
 <script> 
-export default {
 
+
+
+
+export default {
+  
   
 
+
 }
-</script>
+</script> 

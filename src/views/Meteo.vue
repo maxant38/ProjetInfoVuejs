@@ -2,6 +2,13 @@
 
   <!-- Load required Bootstrap and BootstrapVue CSS -->
   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+
+
+
+  <link
     type="text/css"
     rel="stylesheet"
     href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"
@@ -12,12 +19,14 @@
     href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
   />
 
+<div class="container">
 <div v-if="Icon != null" id="styleMeteo">
-<div><p>The current weather in Saint Etienne : {{ Weather }} </p></div>
+<div><p class="txt-small">The current weather in Saint Etienne : {{ Weather }} </p></div>
 <img v-bind:src="Icon">
-     <p> {{ Humidity }} </p>
-     <p> {{ Temperature}} </p>
+     <p class="txt"> {{ Humidity }} </p>
+     <p class="txt" > {{ Temperature}} </p>
      
+</div>
 </div>
 
 
@@ -30,20 +39,28 @@
 
 
 <style scoped>
+.txt-small{
+  font-size: 19px;
+}
+
+.txt{
+  font-size:26px;
+}
 
 #styleMeteo{
-  background-color: white;
+  background-color: #00E541;
   padding: 20px;
   margin: 0px 150px 0px 150px;
   border-radius: 8px 150px 10px 80px;
   margin-top:70px 
+
 }
 
 </style>
 
 
 
-//
+
 <script>
 
 import axios from "axios";

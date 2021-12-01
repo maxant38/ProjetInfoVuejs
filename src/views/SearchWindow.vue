@@ -16,13 +16,24 @@
     href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
   />
 
-  <div class="home">
-    <input
+  <div class="home container">
+    <div class="row">
+    <div class="four columns">
+       <input
       v-model="input"
       type="number"
-      placeholder="Enter the id of the window you are looking for"
-    />
+      placeholder="Enter the id of the window you are looking for"/>
+
+    
+    
+    <div class="eight columns">
     <button class="button-56" role="button" v-on:click="search">Search</button>
+    </div>
+    </div>
+    </div>
+    
+  
+
     <div v-if="idWindow != null && idWindow != ''">
       <Window v-bind:idWindow="idWindow"> </Window>
     </div>
@@ -30,7 +41,14 @@
 </template>
 
 <style scoped>
+button{
+   margin-top: 40px;
+}
+input{
+  margin-top: 40px;
 
+font-size: 17px;
+};
       .home{
         background: #00abb7;
         height:100%

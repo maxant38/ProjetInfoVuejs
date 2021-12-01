@@ -23,6 +23,9 @@ console.log("st")
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.row{
+  font-size: 14px;
+}
 
 #titre-colonne {
   height: 84px;

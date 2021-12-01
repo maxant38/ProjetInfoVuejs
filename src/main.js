@@ -4,6 +4,7 @@ import router from './router'
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueSweetalert2 from 'vue-sweetalert2';
+import 'jquery/dist/jquery.js';
 
 
 

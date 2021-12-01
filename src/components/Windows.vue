@@ -66,6 +66,16 @@ export default {
       location.reload();
     },
 
+      showAlertTwo() {
+      // Use sweetalret2
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "The window statut is switched !",
+        confirmButtonColor: "green",
+      }).then(this.forceRerender);
+    },
+
     Switch() {
       axios
         .put(
@@ -74,7 +84,7 @@ export default {
             "/switch"
         )
         .then(() => {
-          this.forceRerender();
+          this.showAlertTwo();
         })
         .catch((error) => {
           console.log(error);
@@ -90,6 +100,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.align-middle{
+  font-size: 15px;
+}
 
 .open {
   color: green;
