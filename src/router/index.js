@@ -1,21 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ListWindows from'../views/ListWindows.vue'
-import SearchWindow from'../views/SearchWindow.vue'
-import Weather from'../views/Weather.vue'
-import ListRooms from'../views/ListRooms.vue'
-import ListHeaters from'../views/ListHeaters.vue'
+import ListWindows from '../views/ListWindows.vue'
+import SearchWindow from '../views/SearchWindow.vue'
+import Weather from '../views/Weather.vue'
+import ListRooms from '../views/ListRooms.vue'
+import ListHeaters from '../views/ListHeaters.vue'
+
 
 const routes = [
   {
     path: '/',
     name: 'SearchWindow',
     component: SearchWindow
-  }, 
+  },
   {
     path: '/heaters',
     name: 'ListHeaters',
     component: ListHeaters
-  }, 
+  },
   {
     path: '/windows',
     name: 'ListWindows',

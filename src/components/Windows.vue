@@ -4,7 +4,6 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
   />
 
-    
   <link
     type="text/css"
     rel="stylesheet"
@@ -21,12 +20,16 @@
       <td>{{ id }}</td>
       <td>{{ name }}</td>
       <td>{{ roomName }}</td>
-      <td v-if="currentTemperature < targetTemperature" class="froid">{{ currentTemperature }} °C </td>
-      <td v-else-if="currentTemperature === targetTemperature" class="ok">{{ currentTemperature }} °C </td>
-      <td v-else class="chaud">{{ currentTemperature }} °C </td>
+      <td v-if="currentTemperature < targetTemperature" class="froid">
+        {{ currentTemperature }} °C
+      </td>
+      <td v-else-if="currentTemperature === targetTemperature" class="ok">
+        {{ currentTemperature }} °C
+      </td>
+      <td v-else class="chaud">{{ currentTemperature }} °C</td>
       <td>{{ targetTemperature }} °C</td>
-      <td v-if= 'windowStatus ==="OPEN"' class="open" >{{ windowStatus }}</td>
-      <td v-else class="close" >{{ windowStatus }}</td>
+      <td v-if="windowStatus === 'OPEN'" class="open">{{ windowStatus }}</td>
+      <td v-else class="close">{{ windowStatus }}</td>
     </tr>
   </tbody>
 </template>
@@ -36,11 +39,8 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 export default {
-
   // inheritAttrs: false,
   name: "WindowsDeux",
-
-
 
   props: [
     "id",
@@ -51,7 +51,6 @@ export default {
     "windowStatus",
   ],
   methods: {
-
     showAlert() {
       // Use sweetalret2
       Swal.fire({
@@ -66,7 +65,7 @@ export default {
       location.reload();
     },
 
-      showAlertTwo() {
+    showAlertTwo() {
       // Use sweetalret2
       Swal.fire({
         icon: "success",
@@ -95,13 +94,11 @@ export default {
     },
   },
 };
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.align-middle{
+.align-middle {
   font-size: 15px;
 }
 
@@ -112,17 +109,13 @@ export default {
   color: red;
 }
 
-.ok{
-  color:yellowgreen
+.ok {
+  color: yellowgreen;
 }
-.chaud{
-  color:tomato
+.chaud {
+  color: tomato;
 }
-.froid{
-  color:skyblue
+.froid {
+  color: skyblue;
 }
-
-
-
-
 </style>

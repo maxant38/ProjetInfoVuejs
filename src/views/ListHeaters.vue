@@ -1,59 +1,59 @@
 <template>
-<html>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
-  />
+  <html>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
 
-  <!-- Load required Bootstrap and BootstrapVue CSS -->
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"
-  />
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
-  />
+    <!-- Load required Bootstrap and BootstrapVue CSS -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
+    />
 
-  <div class="cont">
-    <table class="table table-hover table-bordered table-dark">
-      <thead>
-        <tr class="align-middle">
-          <th scope="col">Id</th>
-          <th scope="col">Name</th>
-          <th scope="col">Heater Statut</th>
-          <th scope="col">Room id</th>
-          <th scope="col">Power</th>
+    <div class="cont">
+      <table class="table table-hover table-bordered table-dark">
+        <thead>
+          <tr class="align-middle">
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">
+              Heater Statut <br />
+              (click to swith the statut)
+            </th>
+            <th scope="col">Room id</th>
+            <th scope="col">Power</th>
+          </tr>
+        </thead>
 
-        </tr>
-      </thead>
-
-      <Heaters
-        v-for="item in dataHeaters"
-        :id="item.id"
-        :name="item.name"
-        :heaterStatus="item.heaterStatus"
-        :roomId="item.roomId"
-        :power="item.power"
-        :key="item.id"
-      ></Heaters>
-    </table>
-  </div>
+        <Heaters
+          v-for="item in dataHeaters"
+          :id="item.id"
+          :name="item.name"
+          :heaterStatus="item.heaterStatus"
+          :roomId="item.roomId"
+          :power="item.power"
+          :key="item.id"
+        ></Heaters>
+      </table>
+    </div>
   </html>
 </template>
 
 <style scoped>
-html{
+html {
   background-color: black;
 }
 .cont {
   margin: 0 5%;
   font-size: 15px;
-  margin-top:25px;
-  
-  
+  margin-top: 25px;
 }
 
 .table {
@@ -61,19 +61,14 @@ html{
   width: 100%;
 }
 
-table.table-bordered{
-    border:2px solid ;
-    border:2px solid #00E541;
-
-  }
-table.table-bordered > thead > tr > th{
-    border:2px solid #00E541;
+table.table-bordered {
+  border: 2px solid;
+  border: 2px solid #00e541;
 }
-
-
-
+table.table-bordered > thead > tr > th {
+  border: 2px solid #00e541;
+}
 </style>
-
 
 
 
@@ -120,10 +115,7 @@ export default {
         text: "There is a problem with heaters loading !",
         confirmButtonColor: "green",
       });
-     
     },
-
-    
   },
 };
 </script>

@@ -1,10 +1,13 @@
 <template>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-     
-    <div class="cont align-middle">
-     <table class="table table-hover table-bordered table-dark align-middle">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+
+  <div class="cont align-middle">
+    <table class="table table-hover table-bordered table-dark align-middle">
       <thead>
-        <tr class="align-middle ">
+        <tr class="align-middle">
           <th scope="col">Id</th>
           <th scope="col">Name</th>
           <th scope="col">Room Name</th>
@@ -17,41 +20,53 @@
         </tr>
       </thead>
 
-   <tbody >
-    <tr v-on:click="Switch()">
-      <td>{{ idWindow.id }}</td>
-      <td>{{  idWindow.name }}</td>
-      <td>{{ idWindow.roomName }}</td>
-      <td v-if="idWindow.roomCurrentTemperature< idWindow.roomTargetTemperature" class="froid">{{ idWindow.roomCurrentTemperature }} °C </td>
-      <td v-else-if="idWindow.roomCurrentTemperature === roomTargetTemperature" class="ok">{{ idWindow.roomTargetTemperature }} °C </td>
-      <td v-else class="chaud">{{ idWindow.roomCurrentTemperature}} °C </td>
-      <td>{{ idWindow.roomTargetTemperature }} °C</td>
-      <td v-if= 'windowStatus ==="OPEN"' class="open" >{{ idWindow.windowStatus }}</td>
-      <td v-else class="close" >{{ idWindow.windowStatus }}</td>
-    </tr>
-  </tbody>
-   </table>
-
-</div>
-
-
+      <tbody>
+        <tr v-on:click="Switch()">
+          <td>{{ idWindow.id }}</td>
+          <td>{{ idWindow.name }}</td>
+          <td>{{ idWindow.roomName }}</td>
+          <td
+            v-if="
+              idWindow.roomCurrentTemperature < idWindow.roomTargetTemperature
+            "
+            class="froid"
+          >
+            {{ idWindow.roomCurrentTemperature }} °C
+          </td>
+          <td
+            v-else-if="
+              idWindow.roomCurrentTemperature === roomTargetTemperature
+            "
+            class="ok"
+          >
+            {{ idWindow.roomTargetTemperature }} °C
+          </td>
+          <td v-else class="chaud">{{ idWindow.roomCurrentTemperature }} °C</td>
+          <td>{{ idWindow.roomTargetTemperature }} °C</td>
+          <td v-if="windowStatus === 'OPEN'" class="open">
+            {{ idWindow.windowStatus }}
+          </td>
+          <td v-else class="close">{{ idWindow.windowStatus }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
 import axios from "axios";
 import Swal from "sweetalert2";
 export default {
- // inheritAttrs: false,
-  name: 'Window',
+  // inheritAttrs: false,
+  name: "Window",
   props: ["idWindow"],
 
   methods: {
-  
     forceRerender() {
       location.reload();
     },
 
-      showAlertTwo() {
+    showAlertTwo() {
       // Use sweetalret2
       Swal.fire({
         icon: "success",
@@ -62,7 +77,6 @@ export default {
     },
 
     Switch() {
-    
       axios
         .put(
           "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/" +
@@ -78,15 +92,9 @@ export default {
           this.showAlert();
         })
         .finally(() => (this.loading = false));
-    }
-  }
+    },
+  },
 };
-
-
-
-
-
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -94,7 +102,7 @@ export default {
 .cont {
   margin: 0 5%;
   font-size: 15px;
-  margin-top:25px;
+  margin-top: 25px;
 }
 
 .table {
@@ -104,15 +112,14 @@ export default {
   align-content: center;
 }
 
-table.table-bordered{
-    border:2px solid ;
-
-  }
-table.table-bordered > thead > tr > th{
-    border:2px solid #00E541;
+table.table-bordered {
+  border: 2px solid;
+}
+table.table-bordered > thead > tr > th {
+  border: 2px solid #00e541;
 }
 
-.align-middle{
+.align-middle {
   font-size: 15px;
   text-align: center;
 }
@@ -124,17 +131,17 @@ table.table-bordered > thead > tr > th{
   color: red;
 }
 
-.ok{
-  color:yellowgreen
+.ok {
+  color: yellowgreen;
 }
-.chaud{
-  color:tomato
+.chaud {
+  color: tomato;
 }
-.froid{
-  color:skyblue
+.froid {
+  color: skyblue;
 }
 
-.row{
+.row {
   font-size: 16px;
 }
 
@@ -152,7 +159,7 @@ ul#horizontal-list {
   padding-top: 20px;
 }
 ul#horizontal-list li {
-  background-color: pink ;
+  background-color: pink;
   display: inline;
   margin: 20px;
 }
@@ -160,8 +167,6 @@ ul#horizontal-list li {
 .cont {
   margin: 0 5%;
   font-size: 15px;
-  margin-top:25px;
+  margin-top: 25px;
 }
-
-
 </style>

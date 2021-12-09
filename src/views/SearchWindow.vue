@@ -39,6 +39,7 @@
   <div class="result" v-if="idWindow != null && idWindow != ''">
       <Window v-bind:idWindow="idWindow"> </Window>
     </div>
+  
 </template>
 
 <style scoped>
@@ -135,6 +136,7 @@ width: 600px;
 import axios from "axios";
 import Swal from "sweetalert2";
 import Window from "../components/Window.vue";
+
 
 export default {
   name: "SearchWindow",
