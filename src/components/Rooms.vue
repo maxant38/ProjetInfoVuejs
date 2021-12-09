@@ -33,9 +33,13 @@
 
     </tr>
   </tbody>
+
+
 </template>
 
 <script>
+
+
 export default {
   // inheritAttrs: false,
   name: "Windows",
@@ -47,7 +51,8 @@ export default {
     "targetTemperature",
     "buildingId",
   ],
-};
+
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

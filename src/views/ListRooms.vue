@@ -49,7 +49,6 @@
 </table>
   </div>
 
-<xns-seek-bar :bar-color="'#ffdd00'" :current-value="33" :total-value="100"/>
 
 </template>
 
@@ -84,14 +83,14 @@ table.table-bordered > thead > tr > th{
 import Rooms from "@/components/Rooms.vue";
 import axios from "axios";
 import Swal from "sweetalert2";
-import XnsSeekBar from 'xns-seek-bar';
+
 
 
 
 export default {
   name: "ListRooms",
   components: {
-    Rooms,XnsSeekBar
+    Rooms
   },
 
   data() {
@@ -116,6 +115,10 @@ export default {
   },
 
   methods: {
+
+
+
+
     showAlert() {
       // Use sweetalret2
       Swal.fire({

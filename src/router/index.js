@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ListWindows from'../views/ListWindows.vue'
 import SearchWindow from'../views/SearchWindow.vue'
-import Meteo from'../views/Meteo.vue'
+import Weather from'../views/Weather.vue'
 import ListRooms from'../views/ListRooms.vue'
 import ListHeaters from'../views/ListHeaters.vue'
 
@@ -27,9 +27,9 @@ const routes = [
     component: ListRooms
   },
   {
-    path: '/meteo',
-    name: 'Meteo',
-    component: Meteo
+    path: '/weather',
+    name: 'Weather',
+    component: Weather
   },
 
 ]

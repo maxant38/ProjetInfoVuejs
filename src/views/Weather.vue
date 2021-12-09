@@ -67,7 +67,7 @@ import axios from "axios";
 
 
 export default {
-  name: "Meteo",
+  name: "Weather",
   components: {},
 
   data() {

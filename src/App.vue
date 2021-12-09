@@ -38,7 +38,7 @@
             <router-link class="nav-link" to="/heaters">| List Heaters |</router-link>
           </li>
           <li class="nav-item" >
-            <router-link class="nav-link" to="/meteo">| Meteo Sainté |</router-link>
+            <router-link class="nav-link" to="/weather">|  Saint-Etienne Weather |</router-link>
           </li>
         </ul>
       </div>
