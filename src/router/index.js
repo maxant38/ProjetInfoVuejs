@@ -4,7 +4,7 @@ import SearchWindow from '../views/SearchWindow.vue'
 import Weather from '../views/Weather.vue'
 import ListRooms from '../views/ListRooms.vue'
 import ListHeaters from '../views/ListHeaters.vue'
-
+import ListBuildings from '../views/ListBuildings.vue'
 
 const routes = [
   {
@@ -26,6 +26,11 @@ const routes = [
     path: '/rooms',
     name: 'ListRooms',
     component: ListRooms
+  },
+  {
+    path: '/buildings',
+    name: 'ListBuildings',
+    component: ListBuildings
   },
   {
     path: '/weather',

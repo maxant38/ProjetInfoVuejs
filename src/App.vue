@@ -45,6 +45,11 @@
             >
           </li>
           <li class="nav-item">
+            <router-link class="nav-link" to="/buildings"
+              >| List Buildings |</router-link
+            >
+          </li>
+          <li class="nav-item">
             <router-link class="nav-link" to="/weather"
               >| Saint-Etienne Weather |</router-link
             >
