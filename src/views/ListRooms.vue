@@ -20,14 +20,13 @@
   <div class="cont">
     <table class="table table-hover table-bordered  table-dark">
   <thead >
-    <tr >
+    <tr class="align-middle" >
       <th scope="col">Id</th>
       <th scope="col">Name</th>
       <th scope="col">Floor</th>
       <th scope="col">Current Room Temperature</th>
       <th scope="col">Target Room Temperature</th>
-      <th scope="col">Building Id</th>
-      
+      <th scope="col">Building Id</th>      
       
     </tr>
   </thead>

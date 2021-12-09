@@ -4,7 +4,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
   />
 
-    <!-- Load required Bootstrap and BootstrapVue CSS -->
+    
   <link
     type="text/css"
     rel="stylesheet"

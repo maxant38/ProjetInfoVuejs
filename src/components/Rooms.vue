@@ -21,9 +21,16 @@
       <td >{{ id }}</td>
       <td>{{ name }}</td>
       <td>{{ floor }}</td>
-      <td>{{ currentTemperature }}°C</td>
+     <td v-if="currentTemperature< targetTemperature " class="froid">{{ currentTemperature }} °C </td>
+    <td v-else-if="targetTemperature  === currentTemperature" class="ok">{{currentTemperature  }} °C </td>
+    <td v-else class="chaud">{{ currentTemperature }} °C </td>
       <td>{{ targetTemperature }}°C</td>
       <td>{{ buildingId }}</td>
+
+
+   
+
+
     </tr>
   </tbody>
 </template>
@@ -48,6 +55,16 @@ export default {
 
 .align-middle{
   font-size: 16px;
+}
+
+.ok{
+  color:yellowgreen
+}
+.chaud{
+  color:tomato
+}
+.froid{
+  color:skyblue
 }
 
 

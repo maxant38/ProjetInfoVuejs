@@ -34,13 +34,21 @@
     
   
 
-    <div v-if="idWindow != null && idWindow != ''">
+    
+  </div>
+  <div class="result" v-if="idWindow != null && idWindow != ''">
       <Window v-bind:idWindow="idWindow"> </Window>
     </div>
-  </div>
 </template>
 
 <style scoped>
+
+.result{
+  margin-top: 100px;
+  text-align: center;
+}
+
+
 button{
 margin-top:75px;
 
