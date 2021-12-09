@@ -1,4 +1,6 @@
 <template>
+
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
@@ -15,6 +17,7 @@
     rel="stylesheet"
     href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"
   />
+  
 
 
   <div class="cont">
@@ -45,6 +48,8 @@
 
 </table>
   </div>
+
+<xns-seek-bar :bar-color="'#ffdd00'" :current-value="33" :total-value="100"/>
 
 </template>
 
@@ -79,11 +84,14 @@ table.table-bordered > thead > tr > th{
 import Rooms from "@/components/Rooms.vue";
 import axios from "axios";
 import Swal from "sweetalert2";
+import XnsSeekBar from 'xns-seek-bar';
+
+
 
 export default {
   name: "ListRooms",
   components: {
-    Rooms,
+    Rooms,XnsSeekBar
   },
 
   data() {

@@ -5,8 +5,9 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'jquery/dist/jquery.js';
+import XnsSeekBar from 'xns-seek-bar'
 
 
 
 
-createApp(App).use(router, VueAxios, axios, VueSweetalert2).mount('#app')
+createApp(App).use(router, VueAxios, axios, VueSweetalert2,XnsSeekBar).mount('#app')
