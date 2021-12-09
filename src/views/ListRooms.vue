@@ -68,6 +68,7 @@ table.table-bordered > thead > tr > th{
 .cont {
   margin: 0 5%;
   font-size: 15px;
+  margin-top:25px;
 }
 </style>
 

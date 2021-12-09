@@ -18,17 +18,17 @@
 
   <div class="home container">
     <div class="row">
-    <div class="four columns">
+    <div class="eight columns">
        <input
       v-model="input"
       type="number"
-      placeholder="Enter the id of the window you are looking for"/>
+      placeholder="Please enter the id of the window you are looking for."/>
 
     
-    
-    <div class="eight columns">
-    <button class="button-56" role="button" v-on:click="search">Search</button>
     </div>
+    <div class="four columns">
+    <button class="button-56" role="button" v-on:click="search">Search</button>
+  
     </div>
     </div>
     
@@ -42,12 +42,14 @@
 
 <style scoped>
 button{
-   margin-top: 40px;
+margin-top:75px;
+
 }
 input{
-  margin-top: 40px;
+ margin-top:80px;
+font-size: 20px;
+width: 600px;
 
-font-size: 17px;
 };
       .home{
         background: #00abb7;
@@ -59,7 +61,7 @@ font-size: 17px;
 
 .button-56 {
   align-items: center;
-  background-color: #fee6e3;
+  background-color: white;
   border: 2px solid #111;
   border-radius: 8px;
   box-sizing: border-box;
@@ -101,7 +103,7 @@ font-size: 17px;
 }
 
 .button-56:active {
-  background-color: #ffdeda;
+  background-color: #00E541;
   outline: 0;
 }
 

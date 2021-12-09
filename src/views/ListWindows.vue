@@ -55,6 +55,7 @@ html{
 .cont {
   margin: 0 5%;
   font-size: 15px;
+  margin-top:25px;
   
   
 }
