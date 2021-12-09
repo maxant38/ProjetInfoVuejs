@@ -3,12 +3,18 @@ import ListWindows from'../views/ListWindows.vue'
 import SearchWindow from'../views/SearchWindow.vue'
 import Meteo from'../views/Meteo.vue'
 import ListRooms from'../views/ListRooms.vue'
+import ListHeaters from'../views/ListHeaters.vue'
 
 const routes = [
   {
     path: '/',
     name: 'SearchWindow',
     component: SearchWindow
+  }, 
+  {
+    path: '/heaters',
+    name: 'ListHeaters',
+    component: ListHeaters
   }, 
   {
     path: '/windows',

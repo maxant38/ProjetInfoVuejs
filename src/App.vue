@@ -34,6 +34,9 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/rooms">| List Rooms |</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/heaters">| List Heaters |</router-link>
+          </li>
           <li class="nav-item" >
             <router-link class="nav-link" to="/meteo">| Meteo Sainté |</router-link>
           </li>

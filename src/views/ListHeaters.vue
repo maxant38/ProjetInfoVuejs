@@ -23,26 +23,22 @@
         <tr class="align-middle">
           <th scope="col">Id</th>
           <th scope="col">Name</th>
-          <th scope="col">Room Name</th>
-          <th scope="col">Current Room Temperature</th>
-          <th scope="col">Target Room Temperature</th>
-          <th scope="col">
-            Windows Statut<br />
-            (click to swith the statut)
-          </th>
+          <th scope="col">Heater Statut</th>
+          <th scope="col">Room id</th>
+          <th scope="col">Power</th>
+
         </tr>
       </thead>
 
-      <Windows
-        v-for="item in dataWindows"
+      <Heaters
+        v-for="item in dataHeaters"
         :id="item.id"
         :name="item.name"
-        :roomName="item.roomName"
-        :currentTemperature="item.roomCurrentTemperature"
-        :targetTemperature="item.roomTargetTemperature"
-        :windowStatus="item.windowStatus"
+        :heaterStatus="item.heaterStatus"
+        :roomId="item.roomId"
+        :power="item.power"
         :key="item.id"
-      ></Windows>
+      ></Heaters>
     </table>
   </div>
   </html>
@@ -83,29 +79,29 @@ table.table-bordered > thead > tr > th{
 
 <script>
 // @ is an alias to /src
-import Windows from "@/components/Windows.vue";
+import Heaters from "@/components/Heaters.vue";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 export default {
-  name: "ListRooms",
+  name: "ListHeaters",
   components: {
-    Windows,
+    Heaters,
   },
 
   data() {
     return {
-      dataWindows: null,
+      dataHeaters: null,
     };
   },
 
   mounted() {
     axios
       .get(
-        "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows"
+        "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/heaters"
       )
       .then((response) => {
-        (this.dataWindows = response.data), console.log(response.data);
+        (this.dataHeaters = response.data), console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -121,7 +117,7 @@ export default {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "There is a problem with windows loading !",
+        text: "There is a problem with heaters loading !",
         confirmButtonColor: "green",
       });
      
