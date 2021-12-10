@@ -23,6 +23,7 @@ A website build with Vue.js that is linked to the Clever Cloud API. Where you ca
 * [Javascript](https://www.javascript.com/)
 * [Vue.js](https://vuejs.org/)
 * [OpenWeatherMap](https://openweathermap.org/)
+* [Bootstrap](https://bootstrap-vue.org/docs)
 
 
 ## Project participant:
