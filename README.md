@@ -9,7 +9,11 @@ This project is a building management tool that is monitoring windows and heater
 - each window has a name, an a status open or closed
 
 ## What's in the github repository:
-- Develop a Vue.js website that is linked to the Clever Cloud API
+A website build with Vue.js that is linked to the Clever Cloud API. Where you can :
+- Follow the weather of Saint-Etienne in real time
+-  See the heaters,windows,rooms and buildings that exist.
+-  Switch the statut of heaters and windows.
+-  Search for a windows with its id.
 
 
 
@@ -18,6 +22,8 @@ This project is a building management tool that is monitoring windows and heater
 * [Clever Cloud](https://www.clever-cloud.com/fr/)
 * [Javascript](https://www.javascript.com/)
 * [Vue.js](https://vuejs.org/)
+* [OpenWeatherMap](https://openweathermap.org/)
+* [Bootstrap](https://bootstrap-vue.org/docs)
 
 
 ## Project participant:
