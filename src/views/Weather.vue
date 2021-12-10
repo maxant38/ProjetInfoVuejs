@@ -1,3 +1,6 @@
+<!-- Component for displaying weather at Saint Etienne -->
+
+
 <template>
   <!-- Load required Bootstrap and BootstrapVue CSS -->
   <link
@@ -56,7 +59,7 @@
 
 
 <script>
-import axios from "axios";
+import axios from "axios"; // librairie for calling API
 
 export default {
   name: "Weather",
@@ -72,7 +75,7 @@ export default {
     };
   },
 
-  mounted() {
+  mounted() { // Function for getting weather at saint etienne by using open weather map api
     axios
       .get(
         "https://api.openweathermap.org/data/2.5/weather?q=Saint-Etienne,fr&APPID=d6e2c97f41145b13916ae1b9f06164c8"

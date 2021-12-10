@@ -1,3 +1,4 @@
+<!-- Component for searching windows by id -->
 <template >
   <link
     rel="stylesheet"
@@ -133,8 +134,8 @@ width: 600px;
 
 <script>
 // @ is an alias to /src
-import axios from "axios";
-import Swal from "sweetalert2";
+import axios from "axios"; // librairie for calling API
+import Swal from "sweetalert2"; // librairie for displaying alert
 import Window from "../components/Window.vue";
 
 
@@ -152,7 +153,7 @@ export default {
   },
 
   methods: {
-    search() {
+    search() { // function for searching window by id
       axios
         .get(
           "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/" +
@@ -173,7 +174,7 @@ export default {
     },
 
     showAlert() {
-      // Use sweetalret2
+      // Function for displaying alert
       Swal.fire({
         icon: "error",
         title: "Oops...",

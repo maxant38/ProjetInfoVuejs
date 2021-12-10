@@ -1,3 +1,5 @@
+// Index of the website
+
 import { createRouter, createWebHistory } from 'vue-router'
 import ListWindows from '../views/ListWindows.vue'
 import SearchWindow from '../views/SearchWindow.vue'

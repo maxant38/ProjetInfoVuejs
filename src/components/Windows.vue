@@ -1,3 +1,4 @@
+<!-- Component for displaying windows -->
 <template>
   <link
     rel="stylesheet"
@@ -16,7 +17,7 @@
   />
 
   <tbody class="align-middle">
-    <tr v-on:click="Switch()">
+    <tr v-on:click="Switch()"> <!-- Function that trigger the switch of window statut -->
       <td>{{ id }}</td>
       <td>{{ name }}</td>
       <td>{{ roomName }}</td>
@@ -35,8 +36,8 @@
 </template>
 
 <script>
-import axios from "axios";
-import Swal from "sweetalert2";
+import axios from "axios"; // librairie for calling API
+import Swal from "sweetalert2"; // librairie for displaying alert
 
 export default {
   // inheritAttrs: false,
@@ -52,7 +53,7 @@ export default {
   ],
   methods: {
     showAlert() {
-      // Use sweetalret2
+      // Function for displaying alert
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -66,7 +67,7 @@ export default {
     },
 
     showAlertTwo() {
-      // Use sweetalret2
+      // Function for displaying alert
       Swal.fire({
         icon: "success",
         title: "Success",
@@ -75,7 +76,7 @@ export default {
       }).then(this.forceRerender);
     },
 
-    Switch() {
+    Switch() { // function for switching heater statut
       axios
         .put(
           "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/" +

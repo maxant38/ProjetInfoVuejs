@@ -1,3 +1,5 @@
+<!-- Component for displaying rooms -->
+
 <template>
   <link
     rel="stylesheet"
@@ -68,8 +70,8 @@ table.table-bordered > thead > tr > th {
 <script>
 // @ is an alias to /src
 import Rooms from "@/components/Rooms.vue";
-import axios from "axios";
-import Swal from "sweetalert2";
+import axios from "axios"; // librairie for calling API
+import Swal from "sweetalert2"; // librairie for displaying alert
 
 export default {
   name: "ListRooms",
@@ -84,6 +86,7 @@ export default {
   },
 
   mounted() {
+    // function for getting list of rooms
     axios
       .get(
         "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/rooms"
@@ -100,7 +103,7 @@ export default {
 
   methods: {
     showAlert() {
-      // Use sweetalret2
+      // Function for displaying alert
       Swal.fire({
         icon: "error",
         title: "Oops...",

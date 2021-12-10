@@ -1,3 +1,4 @@
+<!-- Component for displaying window -->
 <template>
   <link
     rel="stylesheet"
@@ -21,7 +22,7 @@
       </thead>
 
       <tbody>
-        <tr v-on:click="Switch()">
+        <tr v-on:click="Switch()">  <!-- Function that trigger the switch of windows statut -->
           <td>{{ idWindow.id }}</td>
           <td>{{ idWindow.name }}</td>
           <td>{{ idWindow.roomName }}</td>
@@ -54,20 +55,30 @@
 </template>
 
 <script>
-import axios from "axios";
-import Swal from "sweetalert2";
+import axios from "axios"; // librairie for calling API
+import Swal from "sweetalert2"; // librairie for displaying alert
 export default {
   // inheritAttrs: false,
   name: "Window",
   props: ["idWindow"],
 
   methods: {
-    forceRerender() {
+     showAlert() {
+      // Function for displaying alert
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "There is a problem with windows loading !",
+        confirmButtonColor: "green",
+      });
+    },
+
+    forceRerender() { // function for reloading the page
       location.reload();
     },
 
     showAlertTwo() {
-      // Use sweetalret2
+      // Function for displaying alert
       Swal.fire({
         icon: "success",
         title: "Success",
@@ -76,7 +87,7 @@ export default {
       }).then(this.forceRerender);
     },
 
-    Switch() {
+    Switch() { // function for switching heater statut
       axios
         .put(
           "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/windows/" +

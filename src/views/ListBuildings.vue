@@ -1,3 +1,5 @@
+<!-- Component for displaying heaters -->
+
 <template>
   <html>
     <link
@@ -66,8 +68,8 @@ table.table-bordered > thead > tr > th {
 <script>
 // @ is an alias to /src
 import Buildings from "@/components/Buildings.vue";
-import axios from "axios";
-import Swal from "sweetalert2";
+import axios from "axios"; // librairie for calling API
+import Swal from "sweetalert2"; // librairie for displaying alert
 
 export default {
   name: "ListBuildings",
@@ -81,8 +83,8 @@ export default {
     };
   },
 
-  mounted() {
-    axios
+  mounted() { // function for getting list of buidlings
+    axios 
       .get(
         "https://app-d45f58a2-9018-4709-947d-995f929abb3f.cleverapps.io/api/buildings"
       )
@@ -99,7 +101,7 @@ export default {
 
   methods: {
     showAlert() {
-      // Use sweetalret2
+      // librairie for displaying alert
       Swal.fire({
         icon: "error",
         title: "Oops...",

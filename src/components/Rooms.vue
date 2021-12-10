@@ -1,3 +1,4 @@
+<!-- Component for displaying heaters -->
 <template>
   <link
     rel="stylesheet"
@@ -21,8 +22,9 @@
       <td >{{ id }}</td>
       <td>{{ name }}</td>
       <td>{{ floor }}</td>
+      <!-- We change the color of the font depending of the temperature -->
      <td v-if="currentTemperature< targetTemperature " class="froid">{{ currentTemperature }} °C </td>
-    <td v-else-if="targetTemperature  === currentTemperature" class="ok">{{currentTemperature  }} °C </td>
+    <td v-else-if="targetTemperature  === currentTemperature" class="ok">{{currentTemperature  }} °C </td> 
     <td v-else class="chaud">{{ currentTemperature }} °C </td>
       <td>{{ targetTemperature }}°C</td>
       <td>{{ buildingId }}</td>
@@ -41,7 +43,7 @@
 
 
 export default {
-  // inheritAttrs: false,
+
   name: "Windows",
   props: [
     "id",
